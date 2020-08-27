@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "CSS";
+}
+
+<style>
+    /*
+            When inside of a style tag you are no longer writing HTML. Instead, you're
+            writing CSS, which has a different syntax.
+        */
+    h2 {
+        color: brown;
+        font-size: 24px;
+    }
+
+    main {
+        background-color: lightblue;
+    }
+
+    .headingStyle {
+        text-decoration: underline;
+        font-family: 'Freestyle Script';
+    }
+
+    #footerStyle {
+        background-color: khaki;
+        font-size: 16px;
+    }
+</style>
+
+
+<section>
+    <article>
+        <h2 class="headingStyle">
+            Different Ways to Apply CSS
+        </h2>
+        <section>
+            <h3>
+                Inline Styles
+            </h3>
+            <p>
+                Inline styles use the style attribute inside of an HTML tag. This is typically avoided, except in rare cases, because it isn't reusable. It uses semicolon-seperated, CSS property/value pairs in the attribute's value. Highest in terms of proximity and specificity but is the least reusable.
+            </p>
+        </section>
+        <section>
+            <h3>
+                Internal Style
+            </h3>
+            <p>
+                Internal style is defined inside the head of a page. It is more reusable, as the styling applies to the whole page. It is second in terms of proximity and specificity.
+            </p>
+        </section>
+        <section>
+            <h3>
+                External Style
+            </h3>
+            <p>
+                External styles are written in .css style sheets, which are brought into each page via a link in the head. This is best practice as it is reusable for the entire site. Lowest in terms of proximity and specificity.
+            </p>
+        </section>
+        <section>
+            <h3 class="headingStyle">
+                Imported Style
+            </h3>
+            <p>
+                Imported styling is done via an @@import at the top of an external style sheet. It allows one style sheet to use styling from another one. This is rarely used, most typically when seperation of concerns is an issue or when using styling from a resource outside of the solution.
+            </p>
+        </section>
+    </article>
+    <article>
+        <h2>
+            CSS Selectors
+        </h2>
+        <section>
+            <h3>
+                By Tag Name
+            </h3>
+            <p>
+                This targets all elements of that tag's type, such a p, li, or h1
+            </p>
+        </section>
+        <section>
+            <h3>
+                By Class
+            </h3>
+            <p>
+                Called by adding the class attribute to an HTML tag. Can be used multiple times per page. Defined in the CSS with a period.
+            </p>
+        </section>
+        <section>
+            <h3>
+                By ID
+            </h3>
+            <p>
+                Called by adding the id attribute to an HTML tag. Used a maximum of once per page. Defined in the CSS with a hashtag.
+            </p>
+        </section>
+    </article>
+</section>

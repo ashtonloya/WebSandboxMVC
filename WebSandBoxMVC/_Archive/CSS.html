@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    <!--
+    CSS Comments:
+    Slashterisk /*multi-line*/ (Cannot nest comments)
+
+    CSS Syntax:
+    selector {
+    property: value;
+    }
+
+    We can target HTML to style in different ways
+    1) by tag name
+    2) by id: #idname
+    3) by class name: .classname
+
+    Classes and ids are developer defined
+    IDs are intended to be used once per page, but classes are
+    designed to be used as often as needed.
+
+    CSS is case sensitive.
+
+    We can incorporate CSS into our HTML pages in 3 ways
+    1) INLINE styling - use the style attribute on a particular tag.
+    2) INTERNAL Stylesheets - use style tags in the head element of the page
+    3) EXTERNAL Stylesheets - use link tags in the head that point to a CSS stylesheet
+
+    NOTE: IMPORTING style sheets - uses an @import at the top of an external
+    stylesheet to link two stylesheets together. This practice is largely deprecated
+    but you could see it in legacy code.
+
+    We can target items to style in different ways
+    1) target by tag name - most generic
+    2) target by class name (.className) - more specific
+    a. class selectors are denoted by a period
+    b. they can be used as often as needed
+    c. they are applied to html tags using the class attribute
+    ex. <h1 class="alert">Alert</h1>
+    3) target by id name (#IdName)
+    a. id selectors denoted by a #
+    b. should only be used once per page (unique identifiers)
+    c. applied to HTML tags using the id attribute
+    ex. <h1 id="Alert">Alert</h1>
+
+    CSS precedence is the process of determining which rule set will win out
+        when there are multiple rules targeting the same element. CSS has a
+        cascading hierarchy where the most specific rules override conflicting
+        rules of a lower specificity.
+        - Proximity: the styling that is physically closest to the element has
+        higher proximity (inline over internal, internal over external)
+        - Specificity: How the element is being targeted. (id over class, class over tag)
+
+        You can also combine selectors to increase specificity:
+        - Compound selectors: apply formatting to a comma-seperated list of selectors
+        Ex: h1, h2, h3 {color: purple;}
+        - Descendant selectors: apply formatting to a selector that is nested in another
+        selector in the order provided, space seperated, read right to left
+        Ex: div h1 span {font-style: bold;}
+        - Adjacent selectors: apply formatting to an element of a certain type with
+        a specified class or id
+        Ex: h2.headingStyle {font-family: wingding;}
+
+    -->
+    <meta charset="utf-8" />
+    <meta name="description" content="This is a test page for CSS" />
+    <meta name="author" content="Chris Nuckolls" />
+    <meta name="keywords" content="Centriq, HTML, CSS, FED1" />
+    <title>CSS Basics | Web Sandbox</title>
+    <link href="Styles/custom.css" rel="stylesheet" />
+    <link href="Images/favicon.ico" rel="shortcut icon" />
+    <!--<link href="Fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />-->
+    <link href="Styles/print.css" rel="stylesheet" media="print" />
+    <script src="Scripts/html5shiv.js"></script>
+    <style>
+        /*
+            When inside of a style tag you are no longer writing HTML. Instead, you're
+            writing CSS, which has a different syntax.
+        */
+        h2 {
+            color: brown;
+            font-size: 24px;
+        }
+
+        main {
+            background-color: lightblue;
+        }
+
+        .headingStyle {
+            text-decoration: underline;
+            font-family: 'Freestyle Script';
+        }
+
+        #footerStyle {
+            background-color: khaki;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 style="color:red;">
+            Web Sandbox
+        </h1>
+        <p style="font-style:italic; color:midnightblue">
+            Notes and resources for HTML and CSS
+        </p>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="Index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            </li>
+            <li>
+                <a href="HTML.html"><i class="fa fa-html5" aria-hidden="true"></i> HTML</a>
+            </li>
+            <li>
+                <a href="CSS.html" class="selected"><i class="fa fa-css3" aria-hidden="true"></i> CSS</a>
+            </li>
+            <li>
+                <a href="Colors.html"><i class="fa fa-paint-brush" aria-hidden="true"></i> Colors</a>
+            </li>
+            <li>
+                <a href="Tables.html"><i class="fa fa-table" aria-hidden="true"></i> Tables</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <h2 class="headingStyle">
+                    Different Ways to Apply CSS
+                </h2>
+                <section>
+                    <h3>
+                        Inline Styles
+                    </h3>
+                    <p>
+                        Inline styles use the style attribute inside of an HTML tag. This is typically avoided, except in rare cases, because it isn't reusable. It uses semicolon-seperated, CSS property/value pairs in the attribute's value. Highest in terms of proximity and specificity but is the least reusable.
+                    </p>
+                </section>
+                <section>
+                    <h3>
+                        Internal Style
+                    </h3>
+                    <p>
+                        Internal style is defined inside the head of a page. It is more reusable, as the styling applies to the whole page. It is second in terms of proximity and specificity.
+                    </p>
+                </section>
+                <section>
+                    <h3>
+                        External Style
+                    </h3>
+                    <p>
+                        External styles are written in .css style sheets, which are brought into each page via a link in the head. This is best practice as it is reusable for the entire site. Lowest in terms of proximity and specificity.
+                    </p>
+                </section>
+                <section>
+                    <h3 class="headingStyle">
+                        Imported Style
+                    </h3>
+                    <p>
+                        Imported styling is done via an @import at the top of an external style sheet. It allows one style sheet to use styling from another one. This is rarely used, most typically when seperation of concerns is an issue or when using styling from a resource outside of the solution.
+                    </p>
+                </section>
+            </article>
+            <article>
+                <h2>
+                    CSS Selectors
+                </h2>
+                <section>
+                    <h3>
+                        By Tag Name
+                    </h3>
+                    <p>
+                        This targets all elements of that tag's type, such a p, li, or h1
+                    </p>
+                </section>
+                <section>
+                    <h3>
+                        By Class
+                    </h3>
+                    <p>
+                        Called by adding the class attribute to an HTML tag. Can be used multiple times per page. Defined in the CSS with a period.
+                    </p>
+                </section>
+                <section>
+                    <h3>
+                        By ID
+                    </h3>
+                    <p>
+                        Called by adding the id attribute to an HTML tag. Used a maximum of once per page. Defined in the CSS with a hashtag.
+                    </p>
+                </section>
+            </article>
+        </section>
+    </main>
+    <footer id="footerStyle">
+        &copy; 2020 Chris L. Nuckolls
+    </footer>
+</body>
+</html>

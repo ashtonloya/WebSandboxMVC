@@ -1,0 +1,12 @@
+﻿body {
+    background-image: none;
+}
+
+main {
+    background-color: none;
+}
+
+nav {
+    /*visibility: hidden;*/
+    display: none;
+}

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<!--
+    This is an HTML comment. Comments are ignored by a compiler or browser. They are
+    used to note things in code, comment out old code, or keep track of changes.
+
+    As an HTML comment these comments can be seen in the page source.
+
+    By default HTML comments are multi-line.
+
+    Above is the doctype declaration. It must be the first line of any HTML document. It 
+    is not an HTML tag. It is an instruction for the browser on what type of document
+    it will be reading. In this case "html" indicates that this in an HTML5 document.
+-->
+<html lang="en">
+<!-- 
+     The html tag indicates that everything inside of it is HTML   
+-->
+<head>
+    <!--
+       The head tag holds information about the HTML document. Most of the information
+        in the head tag is not displayed to the user. This typically includes title,
+        meta, link, and script tags, but can also include other information.
+    -->
+    <meta charset="utf-8" /> <!--Describes the character set used on the page-->
+    <meta name="description" content="This is the site description" />
+    <meta name="author" content="Chris Nuckolls" />
+    <meta name="keywords" content="Centriq, HTML, CSS, FED1" />
+    <title>@ViewBag.Title | Web Sandbox</title>
+    <link href="~/Content/Styles/custom.css" rel="stylesheet" />
+    <link href="~/Content/Images/favicon.ico" rel="shortcut icon" />
+    <!--<link href="Fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />-->
+    <link href="~/Content/Styles/print.css" rel="stylesheet" media="print"/>
+    <script src="~/Content/Scripts/html5shiv.js"></script>
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+    <!-- The body tag holds the content of the page -->
+    <header>
+        <!-- A header is a container at the top of the page -->
+        <img src="~/Content/Images/CentriqLogo.png" alt="Centriq Training" id="headerLogo" />
+        <div id="headerText">
+            <h1>
+                Web Sandbox | @ViewBag.Title
+            </h1>
+            <p>
+                Notes and resources for HTML and CSS
+            </p>
+        </div>
+        <div class="clearFix"></div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="@Url.Action("Index","Home")"Index.html" class="selected"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            </li>
+            <li>
+                <a href="@Url.Action("HTML","Home") "HTML.html"><i class="fa fa-html5" aria-hidden="true"></i> HTML</a>
+            </li>
+            <li>
+                <a href="@Url.Action("CSS","Home") "CSS.html"><i class="fa fa-css3" aria-hidden="true"></i> CSS</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Colors","Home") "Colors.html"><i class="fa fa-paint-brush" aria-hidden="true"></i> Colors</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Tables","Home") "Tables.html"><i class="fa fa-table" aria-hidden="true"></i> Tables</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+     @RenderBody()
+    </main>
+    <footer>
+        <!-- The footer is a container at the bottom of the page that provides closing info -->
+        <!-- HTML character entities are special characters that are displayed in HTML. They start with an &, followed by the name of the entity, then a semicolon -->
+        &copy; @DateTime.Now.Year Chris L. Nuckolls
+        @RenderSection("scripts", required: false)
+    </footer>
+</body>
+</html>

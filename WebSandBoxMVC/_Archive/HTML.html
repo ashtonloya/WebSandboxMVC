@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is a test page for HTML" />
+    <meta name="author" content="Chris Nuckolls" />
+    <meta name="keywords" content="Centriq, HTML, CSS, FED1" />
+    <title>HTML Basics | Web Sandbox</title>
+    <link href="Styles/custom.css" rel="stylesheet" />
+    <link href="Images/favicon.ico" rel="shortcut icon" />
+    <!--<link href="Fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />-->
+    <link href="Styles/print.css" rel="stylesheet" media="print" />
+    <script src="Scripts/html5shiv.js"></script>
+
+</head>
+<body>
+    <header>
+        <!-- A header is a container at the top of the page -->
+        <h1>
+            Web Sandbox
+        </h1>
+        <p>
+            Notes and resources for HTML and CSS
+        </p>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="Index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            </li>
+            <li>
+                <a href="HTML.html" class="selected"><i class="fa fa-html5" aria-hidden="true"></i> HTML</a>
+            </li>
+            <li>
+                <a href="CSS.html"><i class="fa fa-css3" aria-hidden="true"></i> CSS</a>
+            </li>
+            <li>
+                <a href="Colors.html"><i class="fa fa-paint-brush" aria-hidden="true"></i> Colors</a>
+            </li>
+            <li>
+                <a href="Tables.html"><i class="fa fa-table" aria-hidden="true"></i> Tables</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <aside id="rightColumn">
+            <h2>
+                Topics
+            </h2>
+            <ul>
+                <li>
+                    <a href="#basics">HTML Basics</a>
+                </li>
+                <li>
+                    <a href="#lists">Lists</a>
+                </li>
+                <li>
+                    <a href="#semantics">Semantic vs Non-Semantic Tags</a>
+                </li>
+                <li>
+                    <a href="#links">Links</a>
+                </li>
+            </ul>
+            <h3>External Resources</h3>
+
+            <ul class="asideList">
+                <li>
+                    <a href="https://www.w3schools.com/html/default.asp">W3Schools HTML</a>
+                </li>
+                <li>
+                    <a href="https://htmlcheatsheet.com/">Online Interactive Cheatsheet</a>
+                </li>
+                <li>
+                    <a href="https://validator.w3.org/">HTML Validator</a>
+                </li>
+                <li>
+                    <a href="http://www.sololearn.com/Course/HTML/ ">Solo Learn HTML</a>
+                </li>
+                <li>
+                    <a href="http://www.tutorialspoint.com/html/">Tutorials Point HTML</a>
+                </li>
+                <li>
+                    <a href="http://htmldog.com/guides/html/">HTML Dog (HTML)</a>
+                </li>
+                <li>
+                    <a href="https://panipsum.com/">Lorem Ipsum Generator</a>
+                </li>
+                <li>
+                    <a href="https://youtu.be/y3UH2gAhwPI">UltimateGuide to Learning HTML and CSS</a>
+                </li>
+                <li>
+                    <a href="https://youtu.be/tGWdjWhyWPM">Basic HTML &amp; CSS</a>
+                </li>
+                <li>
+                    <a href="https://github.com/aFarkas/html5shiv/blob/master/dist/html5shiv.js">HTML 5 Shiv</a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <section id="leftColumn">
+            <h2 id="basics">
+                HTML Basics
+            </h2>
+            <p>
+                HTML enables us to mark up the content to provide more meaning behind the scenes, as well as give us something to target with CSS and JavaScript. Using HTML, we can mark something as an abbreviation, create lists, display code and its output, create tables, mark content as quotes, and provide citations. Browsers may or may not provide default formatting for any particular HTML element, regardless, using CSS, we can style any element as we see fit. HTML is not used for visual effect. It is used to describe and structure your content.
+            </p>
+            <article>
+                <h3>
+                    Block Level vs Inline Tags
+                </h3>
+                <p>
+                    Block level tags are designed to break up the flow of content on the page with line breaks. They normally extend the entire width of their parent container and are usually designed to contain other tags (either block level or inline). Inline tags do not normally break the flow of content and instead are designed to allow other content to flow next to them. Inline tags are not designed to contain block level elements.
+                </p>
+                <section>
+                    <h4>
+                        Common Block Level Tags
+                    </h4>
+                    <ul>
+                        <li>
+                            Heading - Range from level 1 (primary) to level 6 (lowest level)
+                        </li>
+                        <li>
+                            Header - a container at the top to introduce a page
+                        </li>
+                        <li>
+                            Main - a container for the primary page content
+                        </li>
+                        <li>
+                            Footer - a container at the bottom the page, typically used to contain closing information like copyright info or lesser navigation items
+                        </li>
+                        <li>
+                            Nav - a container intended for links, usually limited to the primary navigation
+                        </li>
+                        <li>
+                            Article - a stand-alone content area. Typical uses are blog posts, news articles, and important self-contained topics.
+                        </li>
+                        <li>
+                            Section - subsections that group content together and should contain a heading.
+                        </li>
+                        <li>
+                            Aside - content that is indirectly associated with the primary content, such as secondary navigation or advertising.
+                        </li>
+                        <li>
+                            Div - the most generic of block-level elments. It was previously the standard tag for almost everything, but has fallen out of favor with HTML5 in favor of semantic tags
+                        </li>
+                        <li>
+                            P - Paragraph. A low-level element for text and images but it is one of the few block-level elements that is not designed to contain other block-level elements.
+                        </li>
+                        <li>
+                            List - contains content that is broken out, typically with bullet points or numbers, and designed for readability
+                        </li>
+                        <li>
+                            Table - designed for a speadsheet style layout. It contains tabular data laid out in rows and columns.
+                        </li>
+                        <li>
+                            Form - Designed to collect input from the user, typically to be sent to the server for processing.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>
+                        Common Inline Tags
+                    </h4>
+                    <ul>
+                        <li>
+                            img - an image to be displayed
+                        </li>
+                        <li>
+                            a - an anchor tag typically used to create hyperlinks
+                        </li>
+                        <li>
+                            span - a generic inline element that only exists to be targeted with CSS or JavaScript
+                        </li>
+                        <li>
+                            strong - strong importance (bold)
+                        </li>
+                        <li>
+                            em - emphasized (italisized)
+                        </li>
+                        <li>
+                            button - an interface that users click on to trigger some programmed functionality
+                        </li>
+                        <li>
+                            input - used to generate one of several types of user input controls, like text boxes, radio buttons, or checkboxes
+                        </li>
+                        <li>
+                            code - example code
+                        </li>
+                        <li>
+                            samp - Sample output from a computer program
+                        </li>
+                        <li>
+                            abbr - abbreviation or acronym
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            <article>
+                <h3 id="lists">
+                    Lists
+                </h3>
+                <h4>
+                    Ordered Lists
+                </h4>
+                <p>
+                    Use an OL container and LI internal tags. Used for lists where the order is important.
+                </p>
+                <h5>
+                    How to make a PB&amp;J
+                </h5>
+                <ol>
+                    <li>
+                        Lay out two sliced of bread
+                    </li>
+                    <li>
+                        Apply peanut butter to one slice of bread
+                    </li>
+                    <li>
+                        Apply jelly to the other slice of bread
+                    </li>
+                    <li>
+                        Put the two slices together with the peanut butter facing the jelly
+                    </li>
+                </ol>
+                <h4>
+                    Unordered Lists
+                </h4>
+                <p>
+                    Use a UL container with LI internal tags. Used for lists where the order is not important.
+                </p>
+                <h5>
+                    Shopping List
+                </h5>
+                <ul>
+                    <li>
+                        Milk
+                    </li>
+                    <li>
+                        Cereal
+                    </li>
+                    <li>
+                        Bread
+                    </li>
+                    <li>
+                        Ground beef
+                    </li>
+                    <li>
+                        Onions
+                    </li>
+                </ul>
+                <h4>
+                    Definition Lists (Two-Tier Lists)
+                </h4>
+                <p>
+                    Use a DL container plus DT and DD internal tags
+                </p>
+                <h5>
+                    Conference schedule
+                </h5>
+                <dl>
+                    <!-- DTs and DDs give a term/definition pair  -->
+                    <dt>
+                        8am
+                    </dt>
+                    <dd>
+                        Participant Registration
+                    </dd>
+
+                    <dt>
+                        9am
+                    </dt>
+                    <dd>
+                        Lecture: The future of COBOL coding
+                    </dd>
+                    <dd>
+                        Workshop: New HTML5 Web Standards
+                    </dd>
+
+                    <dt>
+                        12:00
+                    </dt>
+                    <dt>
+                        2:00
+                    </dt>
+                    <dd>
+                        Breakout session with Tim Berners Lee
+                    </dd>
+
+                    <dt>
+                        4:00
+                    </dt>
+                    <dd>
+                        Closing remarks
+                    </dd>
+                </dl>
+
+                <h4>
+                    Nested Lists
+                </h4>
+                <p>
+                    Most commonly used with OLs and ULs where a new list is embedded in another list
+                </p>
+                <h5>
+                    Creating a Database
+                </h5>
+                <ol>
+                    <li>
+                        Plan the database
+                        <ul>
+                            <li>
+                                Wireframe the DB
+                            </li>
+                            <li>
+                                Interview product owners
+                            </li>
+                            <li>
+                                Evaluate shortcomings
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Create the tables
+                        <ol>
+                            <li>
+                                Create the fields with names and datatypes
+                            </li>
+                            <li>
+                                Assign primary keys
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        Create the table relationships
+                    </li>
+                    <li>
+                        Add data
+                    </li>
+                    <li>
+                        Test
+                    </li>
+                </ol>
+            </article>
+            <article>
+                <h3 id="semantics">
+                    Semantic vs Non-Semantic Tags
+                </h3>
+                <p>
+                    Semantic tags are intended to describe the content that they contain. Examples include, strong and nav. Non-semantic tags use generalized names, such as i or div. We can still use CSS to mark up either one, but semantic tags are preferred because of their better descriptions.
+                </p>
+                <section>
+                    <h4>
+                        Examples
+                    </h4>
+                    <p>
+                        <b>This line is marked up with b for bold (non-semantic).</b> <br />
+                        <strong>This line is marked up with strong to indicate that it is strongly-emphasized, important text. (semantic)</strong>
+                    </p>
+                </section>
+            </article>
+            <article>
+                <h3 id="links">
+                    Links
+                </h3>
+                <h4>
+                    Relative vs. Absolute links
+                </h4>
+                <p>
+                    These are the two most common types of links
+                </p>
+                <p>
+                    Relative links are for files within your site. It can be defined either on the path from the current page or the path from the root folder. <br />
+                    Here is a relative example: <a href="index.html">Relative link to the Home page</a> <br />
+                    Here is a root-relative example: <a href="/Index.html">Root-relative link to the Home page</a>
+                </p>
+                <p>
+                    Absolute links are for locations outside of your site:
+                    <a href="http://centriq.com" target="_blank">Centriq Training</a>
+                </p>
+                <p>
+                    Email links open up the default email client in order to compose and send an email to the targeted address:
+                    <a href="mailto:postmaster@centriqdev.com">postmaster@centriqdev.com</a>
+                </p>
+                <p>
+                    Telephone links (typically used for mobile sites) are relatively new but allow phone-enabled devices to dial a number:
+                    <a href="tel:+01-913-322-7000">913-322-7000</a>
+                </p>
+                <p>
+                    <a href="http://centriq.com" target="_blank">
+                        <img src="Images/CentriqLogo.png" style="width:120px" />
+                    </a>
+                </p>
+                <p>
+                    Download links are links to non-HTML files. When clicked the default action of browsers is to start downloading the file unless the browser has the ability to read the file
+                </p>
+                <p>
+                    Named anchor (aka bookmark) links refer to an id on the page and navigate to that location when clicked.
+                </p>
+            </article>
+            <article>
+                <h3>
+                    Image Examples
+                </h3>
+                <img src="Images/greg-rakozy-129733-unsplash.jpg" alt="Coding books on a shelf" style="max-width:25%" />
+
+            </article>
+        </section>
+        <div class="clearFix"></div>
+    </main>
+    <footer>
+        <!-- The footer is a container at the bottom of the page that provides closing info -->
+        <!-- HTML character entities are special characters that are displayed in HTML. They start with an &, followed by the name of the entity, then a semicolon -->
+        &copy; 2020 Chris L. Nuckolls
+    </footer>
+</body>
+</html>

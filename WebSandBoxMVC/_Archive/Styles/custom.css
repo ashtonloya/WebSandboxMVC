@@ -1,0 +1,254 @@
+﻿/*
+Font Notes
+
+Fonts are declared in a font-family. Reading from left to right, this is a list of
+fonts starting with the specific desired font followed by a list of back-ups until
+you get to a generic font type at the end.
+
+The fonts available for the browser to use are the fonts on the specific device accessing
+the website.
+
+Web-Safe fonts are those that are widely available across most devices. This is a moving target.
+
+Alternatively, you can import fonts through a CDN (Content Delivery Network) to ensure the same font is used to render your site for
+all devices.
+
+Font sizes can be declared in pixels (px) which are fixed width values. Can also use relative units of measure,
+like em's.
+Stands for the letter M - widest letter in English language
+Font-Size is figured based on the font-size of the parent element
+Example: if parent has font-size of 12px and child has font-size of 1.5em, then child would have 18px font
+Best practice is to declare font-size in px at body level and use em's for all other values.
+*/
+
+/*@import url('reset.css');*/
+@import url('https://fonts.googleapis.com/css?family=Lora|Montserrat&display=swap'); 
+@import url('import.css');
+@import url('../Fonts/font-awesome-4.7.0/css/font-awesome.min.css');
+
+/*
+    From Google Fonts:
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lora', serif;
+*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background: url(../Images/goran-ivos-246271-unsplash.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color:antiquewhite;
+    padding: 1%;
+}
+
+main {
+    background-color: rgba(150, 150, 150, .85);
+    padding: 1% 2%;
+}
+
+footer {
+    font-style: italic;
+    padding: 3%;
+    text-align: center;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 2.2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+}
+
+header h1 {
+    color: blueviolet;
+}
+
+/*navigation styling*/
+a {
+    color:blue;
+    font-weight:bold;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    color:blueviolet;
+    text-decoration: underline;
+    background-color:cornsilk;
+}
+
+nav li a {
+    background-color:lightsalmon;
+    font-weight: bold;
+}
+
+nav li a:hover, nav li a:active, nav li a:focus {
+    text-decoration: none;
+}
+
+nav ul {
+    background-color:lightgrey;
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+    padding: 0px;
+}
+
+/*nav link structure - making navigation horizontal*/
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: .7em;
+    display: block;
+    margin-right: .3em;
+}
+
+/*
+    Color Notes:
+
+We have been using named colors. These are a limited amount of color options
+that are supported by most modern web browsers. (140 options)
+
+There are also color coding systems. With these, you get more specialized
+options
+- Most of them make use of numeric values to represent levels of red,
+green, and blue (referred to as RGB)
+- Using RGB there are 16 million different color options
+
+Hexadecimal Notation
+#RRGGBB
+Original color coding system, but it is not easily readable
+0 is the first digit (you start at zero)
+Second digit 0-9 and A(10)-F(15)
+16 causes the first digit to increment and a second digit is added starting
+at 0 (16 = 10)
+Pattern continues up to 255
+
+Hex Shorthand
+#RGB
+Shortens the numeric representation of a color to 3 digits from 6
+This limits color options to 4096
+Can only be used when there are repeating digits in each color value
+ex. #229988 => #298
+
+Percentage Ranges
+rbg(R%, G%, B%) 1-100% for each
+
+Numeric Ranges
+rbg(r, g, b) uses standard decimal numbers for each color 0-255
+
+RGBA
+rgba(r, g, b, a)
+Alpha adds transparency and should be between 0(none) and 1(full)
+*/
+
+.colors {
+    border: dashed 2px teal;
+    padding: 1%;
+}
+
+.colors article p {
+    padding: 20px 10px;
+    font-size: 20px;
+}
+
+.colors article p span {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#colordemo1 {
+    background-color: #6B00E8;
+    color: #FA1587;
+}
+
+#colordemo2 {
+    background-color: #DDD;
+    color: #111;
+}
+
+#colordemo3 {
+    background-color: rgb(200, 130, 65);
+    color: rgb(25, 95, 72);
+}
+
+#colordemo4 {
+    background-color: rgba(200, 130, 65, .2);
+    color: rgba(25, 95, 72, .7);
+}
+
+#colordemo5 {
+    background-color: coral;
+    color: crimson;
+}
+
+#colorGradient1 {
+/*Syntax: background-image: linear-gradient(angle, color, color)*/
+background-image: linear-gradient(180deg, red, yellow);
+}
+
+#colorGradient2 {
+/*Syntax: background-image: radial-gradient(shape & size at position, start-color, ..., end-color)*/
+background-image: radial-gradient(circle farthest-side at 50% 60%, pink, purple, blue);
+}
+
+.colors article h2 {
+    text-shadow: 3px 2px 5px #222;
+}
+
+/*Table styling*/
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    margin: auto;
+}
+
+td, th {
+    padding: .3em;
+}
+
+thead {
+    background-color: #bada55;
+}
+
+.selected {
+    background-color: #bbb;
+    color: #333;
+    border: 1px solid #888;
+}
+
+/*Floats*/
+#rightColumn {
+    width: 25%;
+    float: right;
+}
+
+#leftColumn {
+    width: 73%;
+    float: left;
+}
+
+.clearFix {
+    clear: both;
+}
+
+#headerLogo {
+    float: left;
+    padding: 1%;
+    margin-right: 2%;
+}
+
+#headerText {
+    float: right;
+}
